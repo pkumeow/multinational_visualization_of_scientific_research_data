@@ -1,0 +1,15 @@
+#maintitle {
+	text-align: center;
+	color:red;
+}
+.container { display:flex; justify-content: center; flex-direction: column; }
+.item {
+	flex-basis: 50px; 
+	text-align:center;
+}
+.header {
+	padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}

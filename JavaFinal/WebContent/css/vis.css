@@ -1,0 +1,57 @@
+.select_style {
+	width:240px; height:30px; overflow:hidden; background:url(../images/arrow.png) no-repeat 215px; 
+	border:1px solid #ccc; 
+	-moz-border-radius: 5px; /* Gecko browsers */ 
+	-webkit-border-radius: 5px; /* Webkit browsers */ 
+	border-radius:5px; 
+} 
+.select_style select {
+	padding:5px; background:transparent;
+	width:100px;
+	font-size: 16px;
+	border:none;
+	height:30px; 
+	-webkit-appearance: none; /*for Webkit browsers*/ 
+}
+.container { display:flex; justify-content: space-around; flex-direction: row; }
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 1.2em 2em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 4px;
+  transition: box-shadow 0.5s ease, transform 0.2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+}
+button::before {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+button::after {
+  position: relative;
+  display: inline-block;
+  content: attr(data-title);
+  transition: transform 0.2s ease;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  will-change: transform;
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+}
